@@ -1,0 +1,18 @@
+﻿@model ByteBank.Forum.ViewModels.ContaDadosMinhaContaViewModel
+@{
+    ViewBag.Title = "DadosContaAtualizado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dados Conta atualizado com sucesso!</h2>
+<br />
+
+@if (!Model.HabilitarAutenticacaoDoisFatores)
+{
+    <h4>Você receberá um SMS com o token para confirmar o do celular informado.</h4>
+    <h4>Clique no menu <b>Minha Conta</b> e realize a confirmação.</h4>
+}
+else
+{
+    <h4>Clique no menu <b>ByteBank Fórum</b> para acessar a home da página.</h4>
+}
